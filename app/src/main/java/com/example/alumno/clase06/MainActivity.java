@@ -16,13 +16,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         List<Persona> list = new ArrayList<Persona>();
-        list.add(new Persona("p1", "p1"));
-        list.add(new Persona("p2", "p2"));
-        list.add(new Persona("p3", "p3"));
-        list.add(new Persona("p34", "p4"));
-        list.add(new Persona("p5", "p5"));
-        list.add(new Persona("p6", "p6"));
-
+        list.add(new Persona("p1","p1"));
+        list.add(new Persona("p2","p2"));
+        list.add(new Persona("p3","p3"));
+        list.add(new Persona("p34","p4"));
+        list.add(new Persona("p5","p5"));
+        list.add(new Persona("p6","p6"));
+        list.add(new Persona("p1","p1"));
+        list.add(new Persona("p2","p2"));
+        list.add(new Persona("p3","p3"));
+        list.add(new Persona("p34","p4"));
+        list.add(new Persona("p5","p5"));
+        list.add(new Persona("p6","p6"));
+        list.add(new Persona("p1","p1"));
+        list.add(new Persona("p2","p2"));
+        list.add(new Persona("p3","p3"));
+        list.add(new Persona("p34","p4"));
+        list.add(new Persona("p5","p5"));
+        list.add(new Persona("p6","p6"));
 
         RecyclerView.LayoutManager layoutManager= new LinearLayoutManager(this);
         RecyclerView rcv = (RecyclerView) this.findViewById(R.id.rcvPersonas);

@@ -12,15 +12,22 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
 
     View itemView;
 
+    TextView txNombre;
+    TextView txApellido;
+
     public MyViewHolder(View v){
         super(v);
-        this.itemView=v.findViewById(R.id.textNombre);
+        //this.itemView=v.findViewById(R.id.textNombre);
+        txNombre=(TextView)v.findViewById(R.id.textNombre);
+        txApellido=(TextView)v.findViewById(R.id.txtA);
     }
 
-    public void setNombre(String nombre,String apellido){
-        TextView tv=(TextView)itemView.findViewById(R.id.textNombre);
-        TextView tv2=(TextView)itemView.findViewById(R.id.textApellido);
-        tv.setText(nombre);
-        tv2.setText(apellido);
+    public void setNombre(String nombre){
+        txNombre.setText(nombre);
+    }
+
+    public void setApellido(String apellido){
+
+        txApellido.setText(apellido);
     }
 }

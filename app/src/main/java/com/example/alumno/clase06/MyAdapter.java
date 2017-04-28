@@ -1,6 +1,7 @@
 package com.example.alumno.clase06;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,9 +26,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder>{
 
     //Transforma un layout(XML) en view a travez de un inflate
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout, parent, true);
+        Log.d("onCreateViewHolder", "-");
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout, parent, false);
         MyViewHolder holder = new MyViewHolder(v);
+
         return holder;
     }
 
@@ -35,7 +37,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder>{
     //Bindea la info de la lista con la view
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Persona p= list.get(position);
-        holder.setNombre(p.getNombre(), p.getApellido());
+        holder.setNombre(p.getNombre());
+        holder.setApellido(p.getApellido());
     }
 
     @Override
